@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+                               http://symfony.com/schema/dic/services/services-1.0.xsd"
+>
+
+    <services>
+        <defaults autowire="true" autoconfigure="true" public="false" />
+        
+        <service id="BrainDiminished\SchemaVersionControl\SchemaVersionControlService" class="BrainDiminished\SchemaVersionControl\SchemaVersionControlService">
+        </service>
+
+        <service id="BrainDiminished\SchemaVersionControl\Command\ApplySchemaCommand" class="BrainDiminished\SchemaVersionControl\Command\ApplySchemaCommand" public="true">
+            <tag name="console.command"/>
+        </service>
+
+        <service id="BrainDiminished\SchemaVersionControl\Command\DumpSchemaCommand" class="BrainDiminished\SchemaVersionControl\Command\DumpSchemaCommand" public="true">
+            <tag name="console.command"/>
+        </service>
+
+        <service id="BrainDiminished\SchemaVersionControl\Command\SchemaStatusCommand" class="BrainDiminished\SchemaVersionControl\Command\SchemaStatusCommand" public="true">
+            <tag name="console.command"/>
+        </service>
+    </services>
+
+</container>
