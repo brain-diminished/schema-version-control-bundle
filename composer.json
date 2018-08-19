@@ -1,0 +1,22 @@
+{
+    "name": "brain-diminished/schema-version-control-bundle",
+    "description": "A Symfony bundle for controlling schema versions.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dorian Savina",
+            "email": "dorian.savina@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=7.1",
+        "brain-diminished/schema-version-control": "^1.0",
+        "symfony/framework-bundle": "^4.1"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "BrainDiminished\\SchemaVersionControl\\Bundle\\": ""
+        }
+    }
+}
